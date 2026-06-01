@@ -52,13 +52,21 @@
 
 ### 第一步：安装插件
 
-在终端运行：
+**方式一：通过 Claude Code 插件市场安装（推荐）**
+
+在 Claude Code 中运行：
+
+```
+/install-plugin academic-arsenal
+```
+
+**方式二：手动克隆**
 
 ```bash
 git clone https://github.com/zhao1s747/academic-arsenal.git ~/.claude/plugins/academic-arsenal
 ```
 
-> 这会将插件克隆到 Claude Code 的插件目录。Claude Code 启动时会自动扫描 `~/.claude/plugins/` 下的插件并注册其中的 skill。
+> 两种方式效果相同。Claude Code 启动时会自动扫描 `~/.claude/plugins/` 下的插件并注册其中的 skill。
 
 ### 第二步：验证安装
 
