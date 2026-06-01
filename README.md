@@ -47,15 +47,16 @@
 ## 安装
 
 ```bash
-# 在 Claude Code 中安装插件:
-claude plugin add academic-arsenal
+# 克隆到本地
+git clone https://github.com/zhao1s747/academic-arsenal.git ~/.claude/plugins/academic-arsenal
 ```
 
-或手动克隆:
-```bash
-git clone https://github.com/zhao1s747/academic-arsenal.git
-# 将路径添加到 Claude Code 插件配置
-```
+安装完成后,插件内的三个 skill（`/gen-diagram`、`/gen-slides`、`/gen-thesis`）会自动注册到 Claude Code,无需额外操作。
+
+> **运行依赖**（skill 会自动引导安装）：
+> - Python 3.8+ + `python-pptx`（生成PPT）
+> - LaTeX 发行版（编译论文）：TeX Live / MacTeX / MiKTeX
+> - draw.io 桌面版（可选,用于导出 PNG/PDF）
 
 ## 使用方法
 
@@ -92,15 +93,6 @@ git clone https://github.com/zhao1s747/academic-arsenal.git
 | `midterm` | 15-20 | 中期检查 |
 | `defense` | 18-25 | 毕业答辩 |
 | `group-project` | 8-15 | 课程大作业展示 |
-
-## 环境要求
-
-- **Claude Code**(任何支持插件的版本)
-- **Python 3.8+**: `pip install python-pptx python-docx`
-- **LaTeX 发行版**(编译论文用): TeX Live / MacTeX / MiKTeX
-- **draw.io 桌面版**(可选,用于导出 PNG/PDF)
-
-技能会自动引导你安装缺失的依赖。
 
 ## 参与贡献
 
