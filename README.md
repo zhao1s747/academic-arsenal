@@ -54,19 +54,31 @@
 
 **方式一：通过 Claude Code 插件市场安装（推荐）**
 
-在 Claude Code 中运行：
+```bash
+# 1. 添加插件市场源
+claude plugin marketplace add https://github.com/zhao1s747/academic-arsenal
 
-```
-/install-plugin academic-arsenal
+# 2. 安装插件
+claude plugin install academic-arsenal
 ```
 
-**方式二：手动克隆**
+**方式二：手动克隆 + 加载**
+
+```bash
+# 克隆到本地任意目录
+git clone https://github.com/zhao1s747/academic-arsenal.git ~/academic-arsenal
+
+# 启动 Claude Code 时加载插件
+claude --plugin-dir ~/academic-arsenal
+```
+
+**方式三：永久安装到插件目录**
 
 ```bash
 git clone https://github.com/zhao1s747/academic-arsenal.git ~/.claude/plugins/academic-arsenal
 ```
 
-> 两种方式效果相同。Claude Code 启动时会自动扫描 `~/.claude/plugins/` 下的插件并注册其中的 skill。
+> Claude Code 启动时会自动扫描 `~/.claude/plugins/` 下的插件并注册其中的 skill。
 
 ### 第二步：验证安装
 
