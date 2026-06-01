@@ -1,0 +1,22 @@
+{
+  "name": "academic-arsenal",
+  "description": "Academic writing toolkit: generate diagrams, slides, and thesis from papers",
+  "version": "1.0.0",
+  "author": {
+    "name": "Wenxuan Zhang"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/academic-arsenal",
+  "repository": "https://github.com/YOUR_USERNAME/academic-arsenal",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "academic",
+    "thesis",
+    "latex",
+    "powerpoint",
+    "drawio",
+    "paper-writing",
+    "slides",
+    "diagram"
+  ]
+}
