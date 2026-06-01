@@ -46,17 +46,45 @@
 
 ## 安装
 
+### 前置条件
+
+- 已安装 [Claude Code](https://docs.anthropic.com/en/docs/claude-code)（Anthropic 官方 CLI 工具）
+
+### 第一步：安装插件
+
+在终端运行：
+
 ```bash
-# 克隆到本地
 git clone https://github.com/zhao1s747/academic-arsenal.git ~/.claude/plugins/academic-arsenal
 ```
 
-安装完成后,插件内的三个 skill（`/gen-diagram`、`/gen-slides`、`/gen-thesis`）会自动注册到 Claude Code,无需额外操作。
+> 这会将插件克隆到 Claude Code 的插件目录。Claude Code 启动时会自动扫描 `~/.claude/plugins/` 下的插件并注册其中的 skill。
 
-> **运行依赖**（skill 会自动引导安装）：
-> - Python 3.8+ + `python-pptx`（生成PPT）
-> - LaTeX 发行版（编译论文）：TeX Live / MacTeX / MiKTeX
-> - draw.io 桌面版（可选,用于导出 PNG/PDF）
+### 第二步：验证安装
+
+打开 Claude Code，输入 `/` 查看可用的 skill 列表，你应该能看到：
+
+- `/gen-diagram` — 生成 draw.io 图表
+- `/gen-slides` — 生成 PPT
+- `/gen-thesis` — 生成论文/报告
+
+### 第三步：安装运行依赖（按需）
+
+skill 在运行时会自动检测并提示你安装缺失的依赖，你也可以提前装好：
+
+```bash
+# 生成 PPT / Word 需要
+pip install python-pptx python-docx
+
+# 生成论文需要 LaTeX 发行版（三选一）
+# macOS:
+brew install --cask mactex
+# Windows: 安装 MiKTeX (https://miktex.org)
+# Linux:
+sudo apt install texlive-full
+```
+
+> draw.io 桌面版为可选项，仅在需要将 `.drawio` 导出为 PNG/PDF 时才需要。不安装也不影响生成 `.drawio` 文件（可在 [diagrams.net](https://app.diagrams.net) 网页版打开编辑）。
 
 ## 使用方法
 
