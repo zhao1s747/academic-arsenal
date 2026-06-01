@@ -1,7 +1,7 @@
 ---
 name: gen-thesis
-version: 1.0.0
-description: "Assemble a structured thesis or academic report from existing papers and documents. Outputs compilable LaTeX (primary) or Word .docx (secondary). NEVER fabricates data or citations."
+version: 1.1.0
+description: "Assemble a structured thesis or academic report from existing papers and documents. Outputs compilable LaTeX (primary) or Word .docx (secondary). NEVER fabricates data or citations. Use when: user asks to write/assemble a thesis, dissertation, research proposal, literature survey, or says '写大论文/生成论文/开题报告/调研报告/整合论文'."
 ---
 
 # gen-thesis
@@ -99,6 +99,9 @@ Acknowledgments
 5. Open problems & future directions
 6. References
 ```
+
+**🔴 CHECKPOINT — 章节结构确认：**
+向用户展示规划的文档结构（章节标题 + 每章内容来源 + 哪些地方会留 TODO），确认后再开始生成。用户可能要求调整章节顺序、合并/拆分章节、或指定某些内容的处理方式。
 
 ### Phase 3: Map Content to Structure
 

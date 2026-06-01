@@ -1,7 +1,7 @@
 ---
 name: gen-slides
-version: 1.0.0
-description: "Generate editable PowerPoint presentations from academic papers or documents. Supports seminar, proposal, midterm, defense, and group-project formats."
+version: 1.1.0
+description: "Generate editable PowerPoint presentations from academic papers or documents. Supports seminar, proposal, midterm, defense, and group-project formats. Use when: user asks to make slides/PPT/presentation from a paper, mentions '做PPT/生成PPT/答辩PPT/组会汇报/开题PPT', or needs a presentation for defense/seminar/proposal."
 ---
 
 # gen-slides
@@ -96,6 +96,9 @@ Based on presentation type, plan the slide deck:
 5-6. Implementation / demo (2-3 slides)
 7. Results / evaluation
 8. Conclusion & future work
+
+**🔴 CHECKPOINT — Slide 结构确认：**
+向用户展示规划的 slide 大纲（每页标题 + 内容来源），确认后再生成脚本。用户可能要求调整顺序、增删页面、或强调某部分。
 
 ### Phase 3: Generate python-pptx Script
 

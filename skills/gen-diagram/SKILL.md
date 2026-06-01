@@ -1,7 +1,7 @@
 ---
 name: gen-diagram
-version: 1.0.0
-description: "Generate editable draw.io diagrams from descriptions, papers, or code. Outputs platform-agnostic .drawio XML that opens in diagrams.net (web/desktop) on any OS."
+version: 1.1.0
+description: "Generate editable draw.io diagrams from descriptions, papers, or code. Outputs platform-agnostic .drawio XML that opens in diagrams.net (web/desktop) on any OS. Use when: user asks to draw/visualize/diagram anything, mentions draw.io, asks for architecture/flowchart/pipeline/taxonomy figures, or says '画图/画个图/流程图/架构图'."
 ---
 
 # gen-diagram
@@ -60,6 +60,9 @@ Choose layout strategy based on diagram type:
 - Node spacing: 80px horizontal gap, 80px vertical gap
 - Standard node size: 160x60 (steps), 140x80 (decisions), 120x50 (start/end)
 - Max nodes: 8-20 for readability; if more needed, split into sub-diagrams
+
+**🔴 CHECKPOINT — 生成前确认：**
+向用户展示规划摘要（图表类型、节点列表、布局方向），确认后再生成 XML。如果用户输入较短且意图明确（如"画个流程图：A→B→C"），可跳过此确认直接生成。
 
 ### Phase 4: Generate draw.io XML
 
