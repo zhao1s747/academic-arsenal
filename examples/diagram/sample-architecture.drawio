@@ -1,0 +1,46 @@
+<mxfile host="app.diagrams.net" modified="2026-06-01T00:00:00.000Z" agent="academic-arsenal/gen-diagram" version="21.0.0">
+  <diagram name="SR Network Architecture" id="sr-arch">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="node_input" value="LR Input" style="rounded=1;arcSize=50;fillColor=#d5e8d4;strokeColor=#82b366;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="60" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="node_shallow" value="Shallow Feature&#xa;Extraction (Conv 3x3)" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="55" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="node_deep" value="Deep Feature&#xa;Extraction (N blocks)" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="55" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="node_residual" value="Residual&#xa;Connection (+)" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="195" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="node_upsample" value="Upsampling&#xa;(Pixel Shuffle)" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="195" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="node_output" value="HR Output" style="rounded=1;arcSize=50;fillColor=#d5e8d4;strokeColor=#82b366;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="200" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_1" style="edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;entryX=0;entryY=0.5;rounded=1;" edge="1" source="node_input" target="node_shallow" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_2" style="edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;entryX=0;entryY=0.5;rounded=1;" edge="1" source="node_shallow" target="node_deep" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_3" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=1;" edge="1" source="node_deep" target="node_residual" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_4" style="edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.5;entryX=1;entryY=0.5;rounded=1;" edge="1" source="node_residual" target="node_upsample" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_5" style="edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.5;entryX=1;entryY=0.5;rounded=1;" edge="1" source="node_upsample" target="node_output" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_skip" value="skip connection" style="edgeStyle=orthogonalEdgeStyle;dashed=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=1;" edge="1" source="node_shallow" target="node_upsample" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
