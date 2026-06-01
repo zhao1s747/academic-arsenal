@@ -32,15 +32,9 @@
 
 ## 效果展示
 
-### gen-diagram 生成的图表
+### gen-diagram 生成的图表示例
 
-| 超分辨率方法分类树 | 超分辨率处理流程 |
-|:---:|:---:|
-| ![taxonomy](examples/diagram/sr_taxonomy.png) | ![pipeline](examples/diagram/sr_pipeline.png) |
-
-### gen-diagram 辅助论文画的网络架构图
-
-![HFAT Architecture](examples/diagram/hfat_arch.png)
+![超分辨率方法分类树](examples/diagram/sr_taxonomy.png)
 
 ## 核心特性
 
